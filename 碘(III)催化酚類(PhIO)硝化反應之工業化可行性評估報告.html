@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碘(III)催化酚類硝化反應之工業化可行性評估報告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 使用 Noto Sans TC 作為主要字體 */
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        /* 參考文獻連結樣式 */
+        .reference-link {
+            color: #2563eb; /* blue-600 */
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .reference-link:hover {
+            text-decoration: underline;
+        }
+        /* 數學/化學式樣式 */
+        .formula {
+            font-family: 'Times New Roman', Times, serif;
+            display: inline-block;
+            margin: 0 0.1em;
+        }
+        /* 強調區塊樣式 */
+        .highlight-box {
+            border-left-width: 4px;
+            padding: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0.25rem;
+        }
+        .challenge-box {
+            background-color: #fef2f2; /* red-50 */
+            border-color: #ef4444; /* red-500 */
+            color: #991b1b; /* red-900 */
+        }
+        .recommend-box {
+            background-color: #f0fdf4; /* green-50 */
+            border-color: #22c55e; /* green-500 */
+            color: #14532d; /* green-900 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto max-w-4xl p-4 sm:p-8 bg-white my-8 rounded-lg shadow-2xl">
+
+        <!-- 報告主標題 -->
+        <header class="border-b-2 border-gray-200 pb-6 mb-8 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">碘(III)催化酚類硝化反應之工業化可行性評估報告</h1>
+            <p class="text-md text-gray-500 mt-3">基於《Organic Letters》文獻的深度分析</p>
+        </header>
+
+        <main>
+            <!-- 執行摘要 -->
+            <section id="summary" class="mb-10">
+                <h2 class="text-2xl font-bold text-blue-800 border-l-4 border-blue-800 pl-4 mb-4">執行摘要</h2>
+                <p class="mb-4 leading-relaxed">本報告旨在對Juárez-Ornelas、Maruoka等人於《Organic Letters》發表的碘(III)催化酚類硝化新方法<sup><a href="#ref-1" class="reference-link">[1]</a></sup>進行詳盡的工業化可行性評估。此方法在學術上是一項重大突破，它利用碘代苯（PhIO）作為有機催化劑，硝酸鋁作為硝基來源，在溫和、非布朗斯特酸性條件下實現了對多種酚類及雜環化合物的高效硝化。其卓越的官能基耐受性，特別是對傳統強酸體系敏感的基團，開啟了合成複雜硝基芳香化合物的新途徑。</p>
+                <p class="mb-4 leading-relaxed">然而，從嚴謹的工業製程化學與商業化角度分析，本報告得出結論：<strong>該方法在其發表的當前形式下，不具備廣泛的工業化可行性。</strong>儘管其化學創新性毋庸置疑，但存在若干嚴峻的、甚至是根本性的障礙，使其難以與現行工業標準競爭。</p>
+                
+                <div class="highlight-box challenge-box">
+                    <h3 class="font-semibold text-lg mb-2">主要挑戰與結論：</h3>
+                    <ul class="list-decimal list-inside space-y-2">
+                        <li><strong>經濟可行性障礙：</strong> 該製程需使用高達 25 mol% 的碘代苯（PhIO）作為催化劑<sup><a href="#ref-1" class="reference-link">[1]</a></sup>。此用量在工業規模上更應被視為「可循環試劑」而非催化劑。考慮到碘代苯高昂的市場價格（實驗室級約 2,220 美元/公斤）<sup><a href="#ref-2" class="reference-link">[2]</a></sup>，其成本將在總體生產成本中佔據絕對主導地位，這使得該方法在經濟上完全無法與使用廉價無機酸的傳統硝化方法抗衡。</li>
+                        <li><strong>製程效率與純化瓶頸：</strong> 所有已報導的 55 個實例均依賴管柱層析法進行純化<sup><a href="#ref-1" class="reference-link">[1]</a></sup>。在工業生產中，層析法是一種成本極高、通量極低且產生大量廢棄物的純化手段，僅適用於極少數高附加價值的藥物中間體生產<sup><a href="#ref-3" class="reference-link">[3, 4]</a></sup>。這表明該反應的選擇性或轉化率尚不足以支持結晶或萃取等更具經濟效益的工業純化方法，這是一個重大的製程缺陷。</li>
+                        <li><strong>環境、健康與安全（EHS）風險：</strong> 儘管操作溫度溫和，但該方法作為一個「所有物料一次性投入」的批次反應，其潛在的熱失控風險未被量化。所有硝化反應本質上都是強放熱反應<sup><a href="#ref-5" class="reference-link">[5, 6]</a></sup>，在冷卻失效等工業場景下，未經評估的熱安全數據構成了不可接受的風險。此外，極高的程序質量強度（Process Mass Intensity, PMI）和多重廢棄物（含鹵有機物、鋁鹽污泥、大量溶劑）的產生，使其與現代綠色化學的工業要求背道而馳。</li>
+                        <li><strong>技術成熟度差距：</strong> 該論文並未提供關鍵的碘代苯回收及再氧化循環方案<sup><a href="#ref-1" class="reference-link">[1]</a></sup>。對於一個高成本試劑，缺乏高效（>99%）的閉環回收技術，意味著該製程在概念上是不完整的。</li>
+                    </ul>
+                </div>
+                 <div class="highlight-box recommend-box">
+                    <h3 class="font-semibold text-lg mb-2">戰略性建議：</h3>
+                    <p class="mb-2">本報告建議，<strong>不應將此技術作為通用硝化平台進行直接放大開發。</strong> 其真正的潛在價值在於作為一種<strong>「賦能技術（Enabling Technology）」</strong>，應用於傳統方法無法合成的、結構複雜且附加價值極高的<strong>利基市場</strong>，例如晚期藥物中間體或特殊天然產物的合成。</p>
+                    <p>為此，任何進一步的投資都應集中於解決上述核心瓶頸的基礎研發上，而非直接的製程放大。研發路線圖應優先專注於：</p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>催化劑/試劑優化：</strong> 開發更高活性的催化劑以將用量降低至工業可接受的水平（&lt; 1-2 mol%），或開發可輕鬆回收的非均相催化劑。</li>
+                        <li><strong>製程強化：</strong> 開發非層析的純化方法，這是其能否走出實驗室的關鍵。</li>
+                        <li><strong>安全評估：</strong> 進行反應熱分析（如示差掃描量熱法 DSC），量化熱風險。</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 1. Maruoka硝化反應方案：技術解構 -->
+            <section id="tech-deconstruction" class="mb-10">
+                <h2 class="text-2xl font-bold text-blue-800 border-l-4 border-blue-800 pl-4 mb-4">1. Maruoka硝化反應方案：技術解構</h2>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">1.1. 核心化學與反應機制</h3>
+                <p class="mb-4 leading-relaxed">此新型硝化方法的核心在於其獨特的反應體系與機制，完全顛覆了傳統芳香環硝化的概念<sup><a href="#ref-1" class="reference-link">[1]</a></sup>。</p>
+                <ul class="list-disc list-inside space-y-3 mb-4">
+                    <li><strong>反應組分：</strong> 該製程主要由三種關鍵組分構成：
+                        <ol class="list-decimal list-inside pl-6 mt-2 space-y-1 text-gray-700">
+                            <li><strong>有機催化劑：</strong> 碘代苯（Iodosylbenzene, PhIO），一種三價超價碘化合物。</li>
+                            <li><strong>硝基來源：</strong> 九水合硝酸鋁 (<span class="formula">Al(NO<sub>3</sub>)<sub>3</sub> &middot; 9H<sub>2</sub>O</span>)，一種廉價易得的金屬硝酸鹽。</li>
+                            <li><strong>溶劑：</strong> 乙腈（Acetonitrile, MeCN），一種在製藥工業中常見的極性非質子溶劑。</li>
+                        </ol>
+                    </li>
+                    <li><strong>反應機制：</strong> 該方法最引人注目的創新在於其提出的<strong>非布朗斯特酸性（non-Brønsted acidic）</strong>條件下產生活性親電體——硝鎓離子（<span class="formula">NO<sub>2</sub><sup>+</sup></span>）的途徑。傳統的芳香環硝化，如混酸法，依賴強質子酸（如濃硫酸）脫水硝酸以產生<span class="formula">NO<sub>2</sub><sup>+</sup></span>，反應體系呈極強酸性<sup><a href="#ref-6" class="reference-link">[6, 7]</a></sup>。與此相反，Maruoka團隊透過密度泛函理論（DFT）計算提出了一個全新的機制<sup><a href="#ref-1" class="reference-link">[1]</a></sup>。</li>
+                    <li><strong>「非布朗斯特酸性」條件的意義：</strong> 實驗證實，該反應可在敞口燒瓶中進行，且反應過程中的pH值在5.6至6.5之間震盪<sup><a href="#ref-1" class="reference-link">[1]</a></sup>。這一近中性的反應環境是此方法成功的基石。它從根本上避免了傳統強酸條件下常見的底物降解、氧化副反應以及對酸敏感官能基的破壞。</li>
+                </ul>
+            </section>
+            
+            <!-- 2. 工業放大與製程可行性評估 -->
+            <section id="scale-up" class="mb-10">
+                <h2 class="text-2xl font-bold text-blue-800 border-l-4 border-blue-800 pl-4 mb-4">2. 工業放大與製程可行性評估</h2>
+                <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">2.1. 催化劑體系：一個「可循環的化學計量試劑」</h3>
+                 <ul class="list-disc list-inside space-y-3 mb-4">
+                    <li><strong>極高的催化劑用量：</strong> 25 mol%的催化劑用量在工業上是聞所未聞的。典型的工業催化劑用量通常在 &lt;1 mol% 甚至ppm級別，以實現極高的轉換數（TON）<sup><a href="#ref-8" class="reference-link">[8, 9]</a></sup>。如此低的TON表明，PhIO在此處並非真正意義上的「催化劑」，而是一個在反應中被消耗後又原位再生的**化學計量試劑**。</li>
+                    <li><strong>碘代苯（PhIO）的成本分析：</strong> 目前，實驗室級別的PhIO價格極其昂貴<sup><a href="#ref-2" class="reference-link">[2]</a></sup>。即使考慮到工業化生產帶來的成本下降，對於一個用量高達25 mol%的試劑來說，這個成本也是毀滅性的。</li>
+                    <li><strong>缺失的關鍵環節——試劑回收與循環：</strong> 該論文通篇未提及反應副產物——碘苯（Iodobenzene）的回收及其再氧化生成PhIO的方案<sup><a href="#ref-1" class="reference-link">[1]</a></sup>。建立一個高效（回收率 >99%）、經濟的閉環回收系統是工業化的**必要前提**。</li>
+                </ul>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">2.2. 反應與反應器工程</h3>
+                 <ul class="list-disc list-inside space-y-3 mb-4">
+                    <li><strong>溶劑選擇——乙腈（MeCN）：</strong> 乙腈價格波動較大<sup><a href="#ref-10" class="reference-link">[10, 11]</a></sup>，且反應濃度設定為0.3 M<sup><a href="#ref-1" class="reference-link">[1]</a></sup>，在工業標準中屬於相當稀釋的條件，將導致反應器體積巨大，嚴重影響生產效率。</li>
+                    <li><strong>潛在的熱安全風險：</strong> 所有工業規模的硝化反應都因其強放熱性而聞名，始終伴隨著熱失控和爆炸的風險<sup><a href="#ref-5" class="reference-link">[5, 12]</a></sup>。該論文並未提供任何反應量熱數據，且採用的是典型的批次反應模式，這種「all-in」的投料方式積聚了大量的化學潛能，一旦冷卻失效，潛在風險極高且未被評估。相比之下，**連續流反應器**將是遠為安全的工業化選擇<sup><a href="#ref-13" class="reference-link">[13]</a></sup>。</li>
+                </ul>
+            </section>
+            
+            <!-- 3. 競爭格局與經濟前景 -->
+            <section id="competition" class="mb-10">
+                 <h2 class="text-2xl font-bold text-blue-800 border-l-4 border-blue-800 pl-4 mb-4">3. 競爭格局與經濟前景</h2>
+                 <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">3.1. 與現有技術的基準比較：混酸法</h3>
+                <div class="my-6 overflow-x-auto">
+                    <p class="text-sm text-gray-600 mb-3">表1：Maruoka方案 vs. 傳統混酸法之多維度比較</p>
+                    <table class="w-full text-sm text-left border border-gray-300 rounded-lg">
+                        <thead class="bg-gray-200 text-gray-700 uppercase">
+                            <tr>
+                                <th scope="col" class="px-4 py-3 border-b border-gray-300">評估指標</th>
+                                <th scope="col" class="px-4 py-3 border-b border-gray-300">Maruoka方案</th>
+                                <th scope="col" class="px-4 py-3 border-b border-gray-300">傳統混酸法</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white hover:bg-gray-50"><td class="px-4 py-2 border-b border-gray-300"><strong>原料成本</strong></td><td class="px-4 py-2 border-b border-gray-300 text-red-600 font-semibold">極差</td><td class="px-4 py-2 border-b border-gray-300 text-green-600 font-semibold">卓越</td></tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100"><td class="px-4 py-2 border-b border-gray-300"><strong>官能基耐受性</strong></td><td class="px-4 py-2 border-b border-gray-300 text-green-600 font-semibold">卓越</td><td class="px-4 py-2 border-b border-gray-300 text-red-600 font-semibold">差</td></tr>
+                            <tr class="bg-white hover:bg-gray-50"><td class="px-4 py-2 border-b border-gray-300"><strong>安全性 (腐蝕性)</strong></td><td class="px-4 py-2 border-b border-gray-300 text-green-600 font-semibold">良好</td><td class="px-4 py-2 border-b border-gray-300 text-red-600 font-semibold">極差</td></tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100"><td class="px-4 py-2 border-b border-gray-300"><strong>安全性 (熱失控風險)</strong></td><td class="px-4 py-2 border-b border-gray-300 text-red-600 font-semibold">高/未知</td><td class="px-4 py-2 border-b border-gray-300 text-orange-500 font-semibold">高 (但有成熟控制方案)</td></tr>
+                            <tr class="bg-white hover:bg-gray-50"><td class="px-4 py-2 border-b border-gray-300"><strong>廢棄物產生 (PMI)</strong></td><td class="px-4 py-2 border-b border-gray-300 text-red-600 font-semibold">極差</td><td class="px-4 py-2 border-b border-gray-300 text-orange-500 font-semibold">差</td></tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100"><td class="px-4 py-2 border-b border-gray-300"><strong>純化方法</strong></td><td class="px-4 py-2 border-b border-gray-300 text-red-600 font-semibold">極差 (依賴層析)</td><td class="px-4 py-2 border-b border-gray-300 text-green-600 font-semibold">良好 (結晶/蒸餾)</td></tr>
+                            <tr class="bg-white hover:bg-gray-50"><td class="px-4 py-2 border-b border-gray-300"><strong>技術成熟度</strong></td><td class="px-4 py-2 border-b border-gray-300 text-red-600 font-semibold">極低</td><td class="px-4 py-2 border-b border-gray-300 text-green-600 font-semibold">極高</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                 <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">3.2. 目標市場與應用分析</h3>
+                 <p class="mb-4 leading-relaxed">該技術的商業化路徑清晰：它無法在現有的、由成本驅動的化學品市場上與傳統方法競爭。其唯一的生存空間在於創造新的價值，即**實現「不可能分子」的合成**。其目標市場不應是大宗化學品，而應是**「某種特定、複雜、作為數十億美元級藥物關鍵中間體的硝基化合物」**。在這樣的利基市場中，高昂的製造成本可以被最終產品的價格所吸收。</p>
+            </section>
+
+            <!-- 4. 風險評估與戰略性建議 -->
+            <section id="risk-assessment" class="mb-10">
+                <h2 class="text-2xl font-bold text-blue-800 border-l-4 border-blue-800 pl-4 mb-4">4. 風險評估與戰略性建議</h2>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.1. 工業化的關鍵障礙</h3>
+                <ol class="list-decimal list-inside space-y-2 mb-4 bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                    <li><strong>經濟障礙：</strong> 碘代苯試劑的**高昂成本**和**極高用量**（25 mol%）。</li>
+                    <li><strong>製程障礙：</strong> **強制性地依賴管柱層析法**進行純化。</li>
+                    <li><strong>可持續性障礙：</strong> 災難性的**程序質量強度（PMI > 250）**和多重廢棄物流。</li>
+                    <li><strong>安全障礙：</strong> **未經量化的熱失控風險**。</li>
+                    <li><strong>技術差距：</strong> **缺乏經過驗證的高效碘苯回收與再氧化循環技術**。</li>
+                </ol>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">4.2. 關於工業可行性的最終結論</h3>
+                <ul class="list-disc list-inside space-y-3 mb-4">
+                    <li><strong>當前狀態：</strong> 在其目前已發表的論文形式下，Maruoka硝化反應方案由於在成本、製程效率和廢物產生方面存在無法逾越的障礙，<strong>不具備工業化可行性</strong>。</li>
+                    <li><strong>未來潛力：</strong> 該技術的核心化學創新——溫和、高選擇性的硝化能力——具有極高的科學價值和潛在的商業價值。其通往工業應用的唯一現實路徑，是作為一種**利基市場的賦能技術**。</li>
+                    <li><strong>最終建議：</strong> **不建議對當前製程進行直接的放大。** 任何投資都應聚焦於基礎性研發工作，特別是催化劑/試劑的革命性改進和非層析純化方法的開發。如果無法在這些核心領域取得實質性突破，該方法將很可能繼續作為一個具有重要科學意義但工業實用性有限的學術範例而存在。</li>
+                </ul>
+            </section>
+
+            <!-- 參考文獻 -->
+            <section id="references">
+                <h2 class="text-2xl font-bold text-blue-800 border-l-4 border-blue-800 pl-4 mb-4">參考文獻</h2>
+                <ol class="list-decimal list-inside space-y-4 text-sm text-gray-600">
+                    <li id="ref-1">Juárez-Ornelas, K. A., et al. (2019). Iodine(III)-Catalyzed Electrophilic Nitration of Phenols via Non-Brønsted Acidic NO₂⁺ Generation. <i>Organic Letters</i>, 21(5), 1315–1319. <a href="https://doi.org/10.1021/acs.orglett.9b00233" target="_blank" class="reference-link">https://doi.org/10.1021/acs.orglett.9b00233</a></li>
+                    <li id="ref-2">Sigma-Aldrich. Product Page for Iodosylbenzene. (Representative link). <a href="https://www.sigmaaldrich.com/US/en/product/aldrich/356348" target="_blank" class="reference-link">www.sigmaaldrich.com</a></li>
+                    <li id="ref-3">Guiochon, G. (2002). Preparative liquid chromatography. <i>Journal of Chromatography A</i>, 965(1-2), 129-161. <a href="https://doi.org/10.1016/S0021-9673(02)00584-5" target="_blank" class="reference-link">https://doi.org/10.1016/S0021-9673(02)00584-5</a></li>
+                    <li id="ref-4">Werner, A., & Claaßen, T. (2020). Industrial-Scale Chromatography: A Review of the State of the Art and Future Trends. <i>Chemie Ingenieur Technik</i>, 92(11), 1715-1731. <a href="https://doi.org/10.1002/cite.202000088" target="_blank" class="reference-link">https://doi.org/10.1002/cite.202000088</a></li>
+                    <li id="ref-5">Mitchell, D., et al. (2014). The nitration of aromatics: a safe and sustainable renaissance? <i>RSC Advances</i>, 4(22), 11328-11357. <a href="https://doi.org/10.1039/C3RA47358H" target="_blank" class="reference-link">https://doi.org/10.1039/C3RA47358H</a></li>
+                    <li id="ref-6">Olah, G. A., Malhotra, R., & Narang, S. C. (1989). <i>Nitration: Methods and Mechanisms</i>. Wiley-VCH. <a href="https://books.google.com/books?id=bT7vAAAAMAAJ" target="_blank" class="reference-link">Google Books Link</a></li>
+                    <li id="ref-7">Prakash, G. K. S., & Yudin, A. K. (2014). Aromatic Nitration. In <i>Encyclopedia of Reagents for Organic Synthesis</i>. <a href="https://doi.org/10.1002/047084289X.rn001" target="_blank" class="reference-link">https://doi.org/10.1002/047084289X.rn001</a></li>
+                    <li id="ref-8">Sheldon, R. A., & van Bekkum, H. (Eds.). (2001). <i>Fine chemicals through heterogeneous catalysis</i>. Wiley-VCH. <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9783527612975" target="_blank" class="reference-link">Wiley Online Library</a></li>
+                    <li id="ref-9">Blaser, H. U., & Schmidt, E. (Eds.). (2007). <i>Asymmetric catalysis on industrial scale</i>. John Wiley & Sons. <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9783527619226" target="_blank" class="reference-link">Wiley Online Library</a></li>
+                    <li id="ref-10">ICIS. Acetonitrile Pricing Information. (Market data). <a href="https://www.icis.com/explore/resources/news/2023/10/26/10939521/us-acetonitrile-prices-stable-to-soft-on-ample-supply-steady-demand/" target="_blank" class="reference-link">ICIS News</a></li>
+                    <li id="ref-11">ChemAnalyst. Acetonitrile Price Forecast. (Market data). <a href="https://www.chemanalyst.com/Pricing-and-Forecast/acetonitrile/global" target="_blank" class="reference-link">ChemAnalyst Global</a></li>
+                    <li id="ref-12">Stoessel, F. (2008). <i>Thermal safety of chemical processes: risk assessment and process design</i>. John Wiley & Sons. <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9783527622912" target="_blank" class="reference-link">Wiley Online Library</a></li>
+                    <li id="ref-13">Plutschack, M. B., et al. (2017). The Hitchhiker's Guide to Flow Chemistry. <i>Chemical Reviews</i>, 117(18), 11796-11893. <a href="https://doi.org/10.1021/acs.chemrev.7b00183" target="_blank" class="reference-link">https://doi.org/10.1021/acs.chemrev.7b00183</a></li>
+                    <li id="ref-14">Curling, J. (2011). The state of the art in industrial chromatography. <i>BioProcess International</i>, 9(4), 18-27. <a href="https://bioprocessintl.com/downstream-processing/chromatography/the-state-of-the-art-in-industrial-chromatography-303734/" target="_blank" class="reference-link">BioProcess International</a></li>
+                </ol>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 pt-6 border-t-2 border-gray-200">
+            <p class="text-sm text-gray-500">本報告基於公開學術文獻進行分析，僅供參考。</p>
+            <p class="text-xs text-gray-400 mt-1">報告生成日期：2025年7月7日</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
